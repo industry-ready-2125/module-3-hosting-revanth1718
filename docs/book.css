@@ -1,0 +1,143 @@
+.button {
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    float:left;
+    border:none;
+    padding:10px;
+    font-size: 16px;
+    margin:20px ;
+    cursor: pointer;
+  }
+  .header
+  {
+    position: -webkit-sticky;
+    position: sticky;
+  top: 0;
+    width:100%;
+  height:120px;
+  background-color:#800020;
+  z-index:1000;
+  }
+    .logo
+    {
+        position:absolute;
+        left:40px;
+        top:0px;
+    }
+  .contents
+  {  
+    width:650px;
+     background-color:#800020;
+     font-size: 20px;
+     display: inline-block;
+     word-spacing:300px;
+     margin-left:500px;
+      margin-top:20px;
+     color:white;
+     font-family:Arial,sans-serif;
+     overflow:hidden;
+  }
+    a.Book{
+      width: auto;
+      background-color:#800020;
+      padding: 15px 32px;
+      color: white;
+      position: absolute;
+      right: 100px;
+      top:30px;
+      border-style: solid;
+      border-color: white;
+      border-radius: 1px;
+        }
+        .gallery
+        {
+          margin-top: 5px;
+          opacity: 0.6;
+      
+        }
+.a1
+{
+   width: 99%;
+   height: 100px;
+   position: absolute;
+   top: 130px;
+   background-color: darkgoldenrod;   
+}
+.a2
+{   font-family: ‘Merienda’;
+    font-size: 30px;
+    color: #800020;
+    margin-top: 30px;
+    text-align: center;
+}
+.block
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50px;
+    
+}
+.g1
+  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #800020; 
+  font-family: "Great Vibes", cursive; 
+  font-size: 25px;
+  line-height: 160px;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 40px; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff;
+  }
+.i1
+{
+    width: 400px;
+    height: 370px;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    line-height: 0.4;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px 50px;
+    position: relative;
+    left:10%;
+}
+.i1 p
+{
+  font-size: 15px;
+  font-weight: 700 ;
+}
+.butt {
+    background-color:#800020;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 16px;
+    position:relative;
+    top:15px;
+    margin: 4px 100px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .final
+  {
+    width:100%;
+    height:60%;
+    background-color:	#800020;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+    position:relative;
+    top: 150px;
+  }
+  a{
+    text-decoration: none;
+  }

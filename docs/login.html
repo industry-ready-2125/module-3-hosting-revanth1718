@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Royal Palace</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .div1 {
+            background-image: url("./Images/loginimg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .div {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 5px #800020;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            position: absolute;
+            top: 125px;
+            left: 500px;
+            height: 55%;
+            width: 30%;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            width: 80%;
+            padding: 11px 20px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 40px;
+        }
+
+        #emailErrorMessage {
+            display: none;
+            color: red;
+        }
+
+        .signup {
+            color: #ffffff;
+            text-align: center;
+            top: 60%;
+            width: 100%;
+        }
+
+        .forget {
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-right: -175px;
+            margin-left: 5px;
+        }
+
+        a {
+            color: #C0C0C0;
+        }
+
+        .log {
+            background-color: yellow;
+            color: black;
+            padding: 13px 70px;
+            text-align: center;
+            display: inline-block;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+
+        a.close {
+            text-decoration: none;
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 15px;
+        }
+    </style>
+
+    <script>
+        function validateEmail() {
+            var emailInput = document.querySelector('input[type="text"]');
+            var emailErrorMessage = document.getElementById('emailErrorMessage');
+            var emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+            var isValid = emailPattern.test(emailInput.value);
+
+            if (!isValid) {
+                emailErrorMessage.textContent = "Enter a valid email";
+                emailErrorMessage.style.display = "block"; // Show the error message
+            } else {
+                emailErrorMessage.textContent = ""; // Clear the error message if the email is valid
+                emailErrorMessage.style.display = "none"; // Hide the error message
+            }
+
+            return isValid;
+        }
+
+        function validateForm() {
+            var isValidEmail = validateEmail();
+
+            return isValidEmail;
+        }
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <div class="div">
+            <form action="index.html" onsubmit="return validateForm()" method="post">
+                <h2>Login</h2>
+                <a class="close" href="index.html"><i class="fa-solid fa-house fa-xl"></i></a>
+                
+                <div class="inputbox">
+                    <input type="text" placeholder="Email" onblur="validateEmail()">
+                </div>
+                <div id="emailErrorMessage"></div>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <div class="forget">
+                    <a href="#">Forget Password</a>
+                </div>
+                <input type="submit" value="Log in" class="log">
+                <div class="signup">
+                    <br>Don't Have An Account <a href="signup.html">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booking</title>
+<head>
+<style>
+body {
+  background-color: #800020;
+ }
+.div {
+  background-color:white;
+  border: 5px #800020;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  position: absolute;
+  top: 10px;
+  left:27%;  
+  height:100%;
+  width: 45%
+}
+input[type=text],input[type=text]{
+  position: relative;
+  left:0px;
+  width: 62%;
+  padding: 11px 25px;
+  margin: 14px 0;
+  right: 95px;
+  display: inline-block;
+  border: 1px solid #070707;
+  box-sizing: border-box;
+  border-radius:6px;
+}
+
+.Booknow
+{
+background-color:#800020;
+margin-top: 1%;
+margin-left: auto;
+margin-right: auto;
+color:rgb(255, 255, 255);
+justify-content: center;
+padding:10px 70px;
+text-align:center;
+font-size:15px;
+cursor:pointer;
+border-radius:7px;
+
+}
+a { color: #C0C0C0; }
+</style>
+<body>
+<div class="div">
+  <form action="book.html" method="post">
+    <h2 style="color:rgb(133, 17, 17); text-align: center;"><b>Booking</b></h2>
+      <input type="text" placeholder="Enter Name" required>
+    <input type="text" placeholder="Mobile number" required>
+    <h4 style="color: #070707;margin-right: 290px;margin-top: auto;margin-bottom: auto;">CHECK  IN </h4>
+    <input type="text" placeholder="dd/mm/yyyy" required>
+     <h4 style="color: #070707;margin-right: 280px;margin-top: auto;margin-bottom: auto;">CHECK OUT</h4>
+      <input type="text" placeholder="dd/mm/yyyy" required>
+    <input type="text" placeholder="No of Adults" required>
+        <input type="text" placeholder="No of Childs" required>
+    <input type="text" placeholder="Enter No of rooms"  required>
+     <br>
+      <input type="submit" value="Book Now" class="Booknow">
+    </div>
+</form>
+</body>
+</html

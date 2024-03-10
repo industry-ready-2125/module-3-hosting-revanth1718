@@ -1,0 +1,137 @@
+<DOCTYPE!>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+<title>Royal Palace</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <div class="header" >
+    <div class="logo">
+      <img src="./Images/rr.png"  width="235px" height="120px">
+    </div>
+    <div class="contents">
+      <a href="index.html" class="button">HOME</a>
+      <a href="book.html" class="button">ACCOMODATION</a>
+      <a href="faci.html" class="button">FACILITIES</a> 
+    </div>
+    <div class="Book">
+      <a href="login.html"class="Book">Log In</a>
+    </div>
+  </div>
+  
+<div class="royal">
+<h4>Welcome to Royal Palace</h4>
+</div>
+<div class="royal1">
+<h3">
+Experience a blend of regal elegance and modern comfort in every corner.
+</h3>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="./Images/h1.jpg" style="width:100%;height:100% ">
+</div>
+
+<div class="mySlides fade">
+  <img src="./Images/h2.jpg" style="width:100%;height:100% ">
+</div>
+
+<div class="mySlides fade">
+  <img src="./Images/h3.jpg" style="width:100%;height:100% ">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<div   style=" display:grid;
+     grid-template-columns:repeat(3,1fr);
+     grid-gap:1px;">
+  <a href="book.html">
+    <div  class="block" style="background-color:#CC5500">
+      <img src="./Images/ha.jpg" width="100%" height="60%">
+      <h3>ACCOMODATION</h3>
+
+    </div>
+  </a>
+  <a href="#">
+    <div  class="block" style="background-color:#C41E3A;">
+      <img src="./Images/hf.jpg" width="100%" height="60%">
+      <h3>FOOD & BEVERAGE</h3>
+     
+    </div>
+  </a>
+  <a href="#">
+    <div class="block" style="background-color:#CC5500">
+      <img src="./Images/hc.jpg"  width="100%" height="60%">
+      <h3>CONFERENCING & EVENTS </h3>
+     
+    </div>
+  </a>
+</div>
+<div class="about">
+<img src="./Images/img4.jpg" style="float:left;position:relative;top:30px;left:20px" width="500px" height="320px">
+<div class="about1">
+<h1>About Us</h1>
+<p>Welcome to Hotel Royal Palace, your exquisite haven in the heart of xxxxxx. At Royal Paradise, we pride ourselves on providing a harmonious blend of luxury, comfort, and unmatched hospitality.
+</p>
+<p>
+<b>Our Story:</b><br>
+Discover the story behind Hotel Royal Paradise—a journey rooted in a passion for delivering exceptional guest experiences. From our humble beginnings to becoming a symbol of opulence, every chapter of our story revolves around your satisfaction.
+</p>
+<p>
+<b>Exceptional Hospitality:</b><br>
+Driven by a commitment to excellence, our dedicated team ensures that every guest is treated with warmth and respect. From the moment you step through our doors, expect personalized service that goes beyond expectations.
+</p>
+</div>
+</div>
+<div class="final">
+<h4 style="position:absolute;left:6%">
+LOCATION
+</h4>
+<div style="position:absolute;left:5%; top:15% ;">
+<iframe src="./Images/gmap1.png" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div >
+<div style="position:absolute; left:43%; text-align:left">
+<h4>ADDRESS</h4>
+<p>Royal Palace Hotel</p>
+<p>Near xxxxx</p>
+<p>Andhra Pradesh - 534204</p>
+<p>Email: hotelroyalparadise@gmail.com</p>
+<p>Call us :xxx xxxxxxx</p>
+</div>
+<div style="position:absolute; left:70%; top:10%; " >
+<img src="./Images/rr.png" style="width:75%;">
+</div>
+</div>
+</body>
+</html>

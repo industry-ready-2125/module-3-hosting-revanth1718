@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Royal Palace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body{
+      background-image: url("./Images/image2.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .div1 {
+      position: absolute;
+      top: -5px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      height: 100%;
+    }
+    .div {
+      background-color: rgba(14, 0, 0, 0.6);
+      border: 5px #800020;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      position: absolute;
+      top: 40px;
+      left:335px;  
+      height: 100%;
+      width: 50%;
+    }
+    input[type=text], input[type=email], input[type=tel], input[type=password] {
+      width: 55%;
+      padding: 11px 20px;
+      margin: 10px 0;
+      right: 80px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 40px;
+    }
+    #emailErrorMessage, #mobileErrorMessage, #passwordErrorMessage {
+      display: none;
+      color: red;
+      margin-top: 5px;
+    }
+    .log {
+      background-color: yellow;
+      color: black;
+      position: relative;
+      top: 20px;
+      left:0px;
+      padding: 10px 70px;
+      text-align: center;
+      display: inline-block;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 40px;
+    }
+    .signup {
+      color: #ffffff;
+      text-align: center;
+      top: 85%;
+      width: 100%;
+    }
+    a.close {
+      text-decoration: none;
+      color: white;
+      position: absolute;
+      top: 20px;
+      right: 15px;
+    }
+    a {
+      color: #c0c0c0;
+    }
+  </style>
+  <script>
+    function validateEmail() {
+      var emailInput = document.querySelector('input[type="email"]');
+      var emailErrorMessage = document.getElementById('emailErrorMessage');
+      var emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+      var isValid = emailPattern.test(emailInput.value);
+
+      if (!isValid) {
+        emailErrorMessage.textContent = "Enter a valid email";
+        emailErrorMessage.style.display = "block"; // Show the error message
+      } else {
+        emailErrorMessage.textContent = "";
+        emailErrorMessage.style.display = "none"; // Hide the error message
+      }
+
+      return isValid;
+    }
+
+    function validateMobile() {
+      var mobileInput = document.querySelector('input[type="tel"]');
+      var mobileErrorMessage = document.getElementById('mobileErrorMessage');
+      var mobilePattern = /^[6789]\d{9}$/;
+
+      var isValid = mobilePattern.test(mobileInput.value);
+
+      if (!isValid) {
+        mobileErrorMessage.textContent = "Enter a valid mobile number";
+        mobileErrorMessage.style.display = "block"; // Show the error message
+      } else {
+        mobileErrorMessage.textContent = "";
+        mobileErrorMessage.style.display = "none"; // Hide the error message
+      }
+
+      return isValid;
+    }
+
+    function validatePassword() {
+      var passwordInput = document.querySelectorAll('input[type="password"]');
+      var passwordErrorMessage = document.getElementById('passwordErrorMessage');
+
+      var isValid = passwordInput[0].value === passwordInput[1].value;
+
+      if (!isValid) {
+        passwordErrorMessage.textContent = "Passwords do not match";
+        passwordErrorMessage.style.display = "block"; // Show the error message
+      } else {
+        passwordErrorMessage.textContent = "";
+        passwordErrorMessage.style.display = "none"; // Hide the error message
+      }
+
+      return isValid;
+    }
+
+    function validateAndSubmit() {
+      var isValidEmail = validateEmail();
+      var isValidMobile = validateMobile();
+      var isValidPassword = validatePassword();
+
+      return isValidEmail && isValidMobile && isValidPassword;
+    }
+  </script>
+</head>
+<body>
+  <div class="div1">
+    <div class="div">
+      <form action="index.html" onsubmit="return validateAndSubmit()">
+        <h2>Sign Up</h2>
+        <a class="close" href="index.html"><i class="fa-solid fa-house fa-xl"></i></a>
+        <div class="inputbox">
+          <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="inputbox">
+          <input type="text" placeholder="Enter Username" required>
+        </div>
+        <div class="inputbox">
+          <input type="email" placeholder="Email" onblur="validateEmail()" required>
+        </div>
+        <div id="emailErrorMessage"></div>
+        <div class="inputbox">
+          <input type="tel" placeholder="Phone Number" onblur="validateMobile()" required>
+        </div>
+        <div id="mobileErrorMessage"></div>
+        <div class="inputbox">
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+        <div class="inputbox">
+          <input type="password" placeholder="Re-enter Password" name="psw" onblur="validatePassword()" required>
+        </div>
+        <div id="passwordErrorMessage"></div>
+
+        <input type="checkbox" id="agreement" required>
+        <label for="agreement"> I accept all terms and conditions</label><br>
+        <input type="submit" value="Sign up" class="log">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
